@@ -4,65 +4,50 @@
     Features:
       - Change moment.js locale
   -->
-  <header :class="{'has-shadow animate sticky _bgcl-white': $store.state.menuSticky && !$store.state.isMobileMenuActive}">
+  <header
+    :class="{'has-shadow animate sticky _bgcl-white': $store.state.menuSticky && !$store.state.isMobileMenuActive}"
+  >
     <div class="container">
       <div class="menu-container">
         <!-- Branding -->
-        <nuxt-link 
-          id="branding" 
-          :to="localePath('index')">
-          Logo
-        </nuxt-link>
+        <nuxt-link id="branding" :to="localePath('index')">Logo</nuxt-link>
         <!-- Menu -->
-        <nav 
-          :class="{'-show-mobile': $store.state.isMobileMenuActive}" 
-          class="_dp-f _fdrt-cl _h-72px _jtfct-spbtw">
+        <nav
+          :class="{'-show-mobile': $store.state.isMobileMenuActive}"
+          class="_dp-f _fdrt-cl _h-72px _jtfct-spbtw"
+        >
           <!-- Search + Lang -->
           <!-- Menu Items -->
           <ul class="nav _tal-ct _tal-l-md">
-            <li 
+            <li
               v-scroll-reveal="{delay: i * 100}"
-              v-for="(item, i) in $store.state.primaryMenu" 
+              v-for="(item, i) in $store.state.primaryMenu"
               :key="i"
               class="_pst-rlt list-title _cs-pt _zid-1"
             >
-              <div
-                class="_ttf-upc _pdt-16px _pdbt-8px _pdv-0px-md title">
+              <div class="_pdt-16px _pdbt-8px _pdv-0px-md title">
                 <!-- Icon -->
                 <div v-if="item.submenu">
-                  <i 
-                    :class="item.icon" 
-                    class="fa-fw fa-md"/>
-                  <span 
-                    class="_pst-rlt _t-2px _ttf-upc" 
-                    v-html="item.title"/>
+                  <i :class="item.icon" class="fa-fw fa-md"/>
+                  <span class="_pst-rlt _t-2px" v-html="item.title"/>
                 </div>
-                <nuxt-link
-                  v-else
-                  :to="localePath(item.path)">
-                  <i 
-                    :class="item.icon" 
-                    class="fa-fw fa-md"/>
-                  <span 
-                    class="_pst-rlt _t-2px _ttf-upc" 
-                    v-html="item.title"/></nuxt-link>
+                <nuxt-link v-else :to="localePath(item.path)">
+                  <i :class="item.icon" class="fa-fw fa-md"/>
+                  <span class="_pst-rlt _t-2px" v-html="item.title"/>
+                </nuxt-link>
               </div>
-              <div 
-                v-if="item.submenu" 
-                class="dropdown _pst-asl-md">
+              <div v-if="item.submenu" class="dropdown _pst-asl-md">
                 <!-- [Mobile only] Down arrow -->
                 <div class="_dp-b _dp-n-md">
                   <i class="fal fa-long-arrow-down fa-2x"/>
                 </div>
                 <ul>
-                  <li 
-                    v-for="(list, j) in item.submenu" 
-                    :key="j"
-                    class="_ttf-upc">
-                    <nuxt-link 
-                      :to="localePath(list.path)" 
+                  <li v-for="(list, j) in item.submenu" :key="j" class>
+                    <nuxt-link
+                      :to="localePath(list.path)"
                       class="_cl-white-md _cl-pink hover-spacing -tpr _dp-ilb _dp-b-md _fs-4 _fs-5-md"
-                      v-html="list.title"/>
+                      v-html="list.title"
+                    />
                   </li>
                 </ul>
               </div>
@@ -70,53 +55,53 @@
           </ul>
         </nav>
         <!-- Hamburger Menu Icon -->
-        <Hamburger id="hamburger" />
+        <Hamburger id="hamburger"/>
       </div>
     </div>
     <!-- Loading curtain -->
     <no-ssr>
       <fade-transition>
-        <LoadingCurtain v-if="$store.state.isPageLoading" />
+        <LoadingCurtain v-if="$store.state.isPageLoading"/>
       </fade-transition>
     </no-ssr>
   </header>
 </template>
 
 <script>
-import LoadingCurtain from '~/components/layout/LoadingCurtain'
-import Hamburger from '~/components/layout/Hamburger'
+import LoadingCurtain from "~/components/layout/LoadingCurtain";
+import Hamburger from "~/components/layout/Hamburger";
 export default {
   components: {
     Hamburger,
     LoadingCurtain
   },
   watch: {
-    '$store.state.isSearchModalActive' (val) {
+    "$store.state.isSearchModalActive"(val) {
       if (val) {
-        this.$modal.show('search')
+        this.$modal.show("search");
       } else {
-        this.$modal.hide('search')
+        this.$modal.hide("search");
       }
     }
   },
   created() {
     if (process.browser) {
-      this.$moment.locale(this.$store.state.i18n.locale)
-      window.addEventListener('scroll', () => {
+      this.$moment.locale(this.$store.state.i18n.locale);
+      window.addEventListener("scroll", () => {
         if (window.scrollY > 160) {
-          this.$store.commit('SET_MENU_STICKY', true)
+          this.$store.commit("SET_MENU_STICKY", true);
         } else {
-          this.$store.commit('SET_MENU_STICKY', false)
+          this.$store.commit("SET_MENU_STICKY", false);
         }
-      })
+      });
     }
-  },
-}
+  }
+};
 </script>
 
 
 <style lang="scss" scoped>
-@import '~assets/styles/variables';
+@import "~assets/styles/variables";
 
 #lang-switcher {
   > span {
@@ -128,6 +113,7 @@ export default {
 header {
   /* @media (max-width: $md - 1px) {
     padding: 0px 0px;
+    color: white;
   } */
   padding: 18px 0px;
 }
@@ -175,6 +161,7 @@ header {
       background: rgba(255, 255, 255, 0.9);
       z-index: 0;
       box-shadow: 0px 10px 40px -5px rgba(0, 0, 0, 0.1);
+      color: white;
       &.-show-mobile {
         visibility: visible;
         opacity: 1;
@@ -221,7 +208,7 @@ ul.nav {
   position: relative;
   @media (max-width: $md - 1px) {
     &::before {
-      content: '';
+      content: "";
     }
     transition-delay: 0.2s;
   }
@@ -242,7 +229,7 @@ ul.nav {
         border-style: solid;
         border-width: 0 10px 10px 10px;
         border-color: transparent transparent $default-color transparent;
-        content: '';
+        content: "";
         position: absolute;
         top: -10px;
         left: calc(50% - 5px);

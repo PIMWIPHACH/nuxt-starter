@@ -2,7 +2,7 @@ body {
   overflow: hidden;
   overflow-y: auto;
   max-width: 100% !important;
-  background: rgba(0, 0, 0, 0.015);
+  background-color: white;
 }
 
 h1,
@@ -10,51 +10,9 @@ h2,
 h3,
 h4,
 h5,
-h6,
-button {
-  font-family: Kanit;
+h6 {
+  font-family: Poppins;
   font-weight: 400;
   line-height: 100%;
   outline: none !important;
-}
-
-._cs-pt {
-  user-select: none !important;
-}
-
-.page-enter-active,
-.page-leave-active {
-  transition: .25s;
-}
-
-.page-enter,
-.page-leave-to {
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.bio-button {
-  outline: none !important;
-}
-
-.min-height-100vh {
-  min-height: calc(100vh - 120px); // background: rgba(0, 0, 0, 0.02);
-}
-
-[lazy] {
-  transition: 0.25s;
-  transition-property: background-image !important;
-  // background-size: 100px;
-}
-
-[lazy=loading] {
-  background-color: transparent;
-  background-size: 50px !important;
-  background-repeat: no-repeat !important;
-  background-position: center center !important;
-}
-
-[lazy=loaded] {
-  opacity: 1;
-  // background-size: 50px;
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="_w-100pct bg">
     <!-- Profile Head -->
-    <div>
+    <div class="overlay">
       <div class="container _mgv-48px">
         <div class="row">
           <div class="col-6">
@@ -28,40 +28,28 @@
     <div class="container _mgv-24px">
       <div class="row no-gutters">
         <div class="col-4 _pdh-8px">
-          <div class="card" ref="point">
+          <div class="card">
             <div class="card-block">
-              <img
-                src="~/assets/images/point_star.svg"
-                style="weight: 24px;height: 24px;float: left;"
-              >
-              <h2 class="number" style="color: #FFCD1C; font-weight: semi-bold;">100</h2>
-              <h4 class="card-title" style="margin-right: 50px;">Point</h4>
+              <h2 class="number">0</h2>
+              <h4 class="card-title" style="margin-right: 60px">Point</h4>
             </div>
           </div>
         </div>
 
         <div class="col-4 _pdh-8px">
-          <div class="card" ref="achievement">
+          <div class="card">
             <div class="card-block">
-              <img
-                src="~/assets/images/achieve_diamond.svg"
-                style="weight: 24px;height: 24px;float: left;"
-              >
-              <h2 class="number" style="color: #FF008A">1</h2>
-              <h4 class="card-title" style="margin-right: 5px;">Acheivement</h4>
+              <h2 class="number">0</h2>
+              <h4 class="card-title" style="margin-right: 5px">Acheivement</h4>
             </div>
           </div>
         </div>
 
         <div class="col-4 _pdh-8px">
-          <div class="card" ref="fuel">
+          <div class="card">
             <div class="card-block">
-              <img
-                src="~/assets/images/icon_fuel.svg"
-                style="weight: 28px;height: 28px;float: left;"
-              >
-              <h2 class="number" style="color: #FFCD1C">0</h2>
-              <h4 class="card-title" style="margin-right: 60px;">Fuel</h4>
+              <h2 class="number">0</h2>
+              <h4 class="card-title" style="margin-right: 60px">Fuel</h4>
             </div>
           </div>
         </div>
@@ -80,7 +68,7 @@
             </p>
             <div class="_pdh-64px _mgv-48px">
               <a href="#">
-                <button @click="startTutorial" class="btn">Get Started</button>
+                <button type="submit" class="btn">Get Started</button>
               </a>
             </div>
           </div>
@@ -94,33 +82,6 @@
 export default {
   async asyncData({ store }) {
     store.commit("SET_HEADER_COLOR", "#161878");
-  },
-  methods: {
-    startTutorial() {
-      console.log("start tutorial");
-      this.$store.commit("SET_CURTAIN_VISIBLE", true);
-      // let ref = "fuel";
-      let currentStep = this.$store.state.currentTutorialStep;
-      let ref = this.$store.state.tutorialSteps[currentStep].ref;
-      this.$refs[ref].style.zIndex = 1;
-    }
-  },
-  watch: {
-    "$store.state.currentTutorialStep"(val) {
-      // console.log(val);
-      if (val === 0) {
-        this.$store.commit("SET_CURTAIN_VISIBLE", false);
-        this.$refs["point"].style.zIndex = 0;
-        this.$refs["achievement"].style.zIndex = 0;
-        this.$refs["fuel"].style.zIndex = 0;
-        return;
-      }
-      this.$refs["point"].style.zIndex = 0;
-      this.$refs["achievement"].style.zIndex = 0;
-      this.$refs["fuel"].style.zIndex = 0;
-      let ref = this.$store.state.tutorialSteps[val].ref;
-      this.$refs[ref].style.zIndex = 1;
-    }
   }
 };
 </script>
@@ -173,11 +134,10 @@ h2 {
 
 .name {
   font-size: 1.25em;
-  font-weight: bold;
   color: white;
   margin-bottom: 0px;
   margin-top: 90px;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.5px;
 }
 
 .level {
@@ -187,8 +147,6 @@ h2 {
 }
 
 .number {
-  font-size: 1.75em;
-  font-weight: 600;
   text-align: left;
   margin-left: 10px;
   color: #b1c7ff;
@@ -202,9 +160,6 @@ h4 {
 }
 
 .btn {
-  font-family: poppins;
-  font-weight: bold;
-  letter-spacing: 0.5px;
   background-color: #f0edff;
   height: 250px;
   width: 250px;

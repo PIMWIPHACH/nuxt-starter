@@ -10,19 +10,16 @@
 <rect x="89.231" y="7.2915" width="202.5" height="14.0961" rx="7.04807" fill="white" fill-opacity="0.13"/>
 <path d="M128.174 0.985364C128.174 4.84325 124.218 6.79693 122.24 7.29153H214.589C212.734 6.54963 209.025 4.17554 209.025 0.614413C209.025 -2.94672 212.734 -4.8262 214.589 -5.3208H122.24C124.218 -4.8262 128.174 -2.87252 128.174 0.985364Z" fill="white" fill-opacity="0.13"/>
 <ellipse cx="207.113" cy="24.4478" rx="6.11696" ry="6.12069" fill="url(#paint5_linear)"/>
-<ellipse cx="207.113" cy="24.4476" rx="3.05848" ry="3.06034" fill="#192344"/>
 <rect x="265.224" y="237.652" width="196.566" height="14.0961" rx="7.04807" fill="white" fill-opacity="0.13"/>
 <rect x="285.993" y="264.361" width="202.5" height="14.0961" rx="7.04807" fill="white" fill-opacity="0.13"/>
 <path d="M324.936 258.055C324.936 261.913 320.979 263.866 319.001 264.361H411.35C409.496 263.619 405.787 261.245 405.787 257.684C405.787 254.123 409.496 252.243 411.35 251.749H319.001C320.979 252.243 324.936 254.197 324.936 258.055Z" fill="white" fill-opacity="0.13"/>
 <ellipse cx="342.196" cy="240.203" rx="3.56823" ry="3.5704" fill="url(#paint6_linear)"/>
 <ellipse cx="403.875" cy="281.517" rx="6.11696" ry="6.12069" fill="url(#paint7_linear)"/>
-<ellipse cx="403.875" cy="281.517" rx="3.05848" ry="3.06034" fill="#192344"/>
 <ellipse cx="171.588" cy="142.591" rx="4.58772" ry="4.59052" fill="url(#paint8_linear)"/>
-<ellipse cx="171.588" cy="142.591" rx="2.29386" ry="2.29526" fill="#192344"/>
 <defs>
 <linearGradient id="paint0_linear" x1="58.7768" y1="-6.85278" x2="189.215" y2="359.684" gradientUnits="userSpaceOnUse">
 <stop stop-color="#151862"/>
-<stop offset="1" stop-color="#7D1ACA"/>
+<stop offset="1" stop-color="#1D1ACA"/>
 </linearGradient>
 <linearGradient id="paint1_linear" x1="328.433" y1="3.02588" x2="328.433" y2="7.10634" gradientUnits="userSpaceOnUse">
 <stop stop-color="#FFCD1C"/>

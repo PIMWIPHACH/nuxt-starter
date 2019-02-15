@@ -8,7 +8,30 @@ export const state = () => ({
   isSearchModalActive: false,
   pages: null,
   menuSticky: false,
-  isPageLoading: false
+  isPageLoading: false,
+  headerColor: "#fff",
+  isCurtainVisible: false,
+  tutorialSteps: [
+    {
+      ref: "point",
+      topic: "Point",
+      description:
+        "Points from each mission, you can exchange for more various items in this platform."
+    },
+    {
+      ref: "achievement",
+      topic: "Achievement",
+      description:
+        "Everytime you completed the mission, you get and collect your own badge to have permission for each next mission."
+    },
+    {
+      ref: "fuel",
+      topic: "Fuel",
+      description:
+        "You need to have fuel everytime unless you can’t travel to another planet to complete missions."
+    }
+  ],
+  currentTutorialStep: 0
 });
 
 export const actions = {
@@ -71,6 +94,15 @@ export const actions = {
 };
 
 export const mutations = {
+  SET_CURRENT_STEP(state, n) {
+    state.currentTutorialStep = n;
+  },
+  SET_CURTAIN_VISIBLE(state, bool) {
+    state.isCurtainVisible = bool;
+  },
+  SET_HEADER_COLOR(state, color) {
+    state.headerColor = color;
+  },
   SET_PRIMARY_MENU(state, menu) {
     state.primaryMenu = menu;
   },

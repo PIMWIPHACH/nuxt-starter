@@ -5,6 +5,7 @@
       - Change moment.js locale
   -->
   <header
+    :style="'background-color: ' + $store.state.headerColor"
     :class="{'has-shadow animate sticky _bgcl-white': $store.state.menuSticky && !$store.state.isMobileMenuActive}"
   >
     <div class="container">
@@ -111,10 +112,6 @@ export default {
 }
 
 header {
-  /* @media (max-width: $md - 1px) {
-    padding: 0px 0px;
-    color: white;
-  } */
   padding: 18px 0px;
 }
 

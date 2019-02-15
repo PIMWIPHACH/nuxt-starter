@@ -70,10 +70,10 @@
               นวัตกรรมใหม่ๆ ที่เริ่มต้นจากการทำความเข้าใจคน
               หาความต้องการที่ซ่อนอยู่ในตลาด และเน้นการลงมือทำ
               ลองผิดลองถูก ทำซ้ำ เพื่อทดลองเรียนรู้
-            </p>//
+            </p>
             <span>
               <img src="~/assets/images/standing-23.svg" alt="Youth">
-            </span>//
+            </span>
           </div>
         </div>
       </div>
@@ -86,7 +86,7 @@
           <div align="middle">
             <h4 class="headline">Benefits of Design Thinking</h4>
             <div>
-              <p class="description2" align: middle>
+              <p class="description2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna
                 aliqua.
@@ -150,12 +150,12 @@
       </div>
     </div>
   </div>
-</template
+</template>
 
 <script>
 export default {
-  async created() {
-    // fetch data via api
+  async asyncData({ store }) {
+    store.commit("SET_HEADER_COLOR", "white");
   }
 };
 </script>
@@ -222,48 +222,6 @@ p {
   color: grey;
   font-family: "Bai Jamjuree";
   margin-bottom: 50px;
-}
-
-._cs-pt {
-  user-select: none !important;
-}
-
-.page-enter-active,
-.page-leave-active {
-  transition: 0.25s;
-}
-
-.page-enter,
-.page-leave-to {
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.bio-button {
-  outline: none !important;
-}
-
-.min-height-100vh {
-  min-height: calc(100vh - 120px); // background: rgba(0, 0, 0, 0.02);
-}
-
-[lazy] {
-  transition: 0.25s;
-  transition-property: background-image !important;
-  // background-size: 100px;
-}
-
-[lazy="loading"] {
-  background: url(~assets/images/background2.svg);
-  background-color: transparent;
-  background-size: 50px !important;
-  background-repeat: no-repeat !important;
-  background-position: center center !important;
-}
-
-[lazy="loaded"] {
-  opacity: 1;
-  // background-size: 50px;
 }
 
 .text-center {

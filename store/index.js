@@ -49,7 +49,26 @@ export const state = () => ({
         "You just receive 400 points. It’s great to start with a small action, but there is much more to come. Let’s go ahead to Episode 1."
     }
   ],
-  currentTutorialStep: 0
+  currentTutorialStep: 0,
+  lessons: [{
+    name: 'Introduction',
+    slug: 'introduction',
+    duration: '15 - 30 Mins',
+    description: 'lorem',
+    backgroundImage: ''
+  }, {
+    name: 'Mission 1',
+    slug: 'mission-1',
+    duration: '30 - 45 Mins',
+    description: 'lorem',
+    backgroundImage: ''
+  }, {
+    name: 'Mission 2',
+    slug: 'mission-2',
+    duration: '30 - 60 Mins',
+    description: 'loremsssss',
+    backgroundImage: ''
+  }]
 });
 
 export const actions = {

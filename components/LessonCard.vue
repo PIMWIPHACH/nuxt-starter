@@ -1,14 +1,20 @@
 <template>
   <div class="card">
-    <h2 class="location" style="text-align: left;">{{ location }}</h2>
-    <h2 class="introduction" style="text-align: left;">{{ title }}</h2>
+    <h2 
+      class="location" 
+      style="text-align: left;">{{ location }}</h2>
+    <h2 
+      class="introduction" 
+      style="text-align: left;">{{ title }}</h2>
     <div style="padding: 0px;">
       <img
         src="~/assets/images/point_star.svg"
         style="weight: 18px;height: 18px;float: left;margin-right: 10px"
       >
       <div>
-        <p class="time" style="font-family: poppins;text-align: left;">{{ duration }}</p>
+        <p 
+          class="time" 
+          style="font-family: poppins;text-align: left;">{{ duration }}</p>
       </div>
 
       <div>
@@ -30,15 +36,20 @@ export default {
       type: String,
       default: ""
     },
+    duration: {
+      type: String,
+      default: ""
+    },
+    description: {
+      type: String,
+      default: ""
+    },
     location: {
       type: String,
       default: ""
     }
   },
   data: () => ({
-    duration: "15 - 30 Mins",
-    description:
-      "Imagine you have a mission to save our planet. You may need to know about tools.."
   }),
   // Define methods
   methods: {

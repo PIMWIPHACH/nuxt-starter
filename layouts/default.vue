@@ -10,9 +10,13 @@
     </main>
     <Footer/>
     <!-- Curtain -->
-    <div v-if="$store.state.isCurtainVisible" class="curtain">
+    <div 
+      v-if="$store.state.isCurtainVisible" 
+      class="curtain">
       <!-- Tutorial Panel -->
-      <div class="content _tal-lt" style="margin-bottom: 128px">
+      <div 
+        class="content _tal-lt" 
+        style="margin-bottom: 128px">
         <div class="tut-panel">
           <div class="card _tal-lt _mgh-24px">
             <div class="card-body">
@@ -27,9 +31,9 @@
             </div>
           </div>
           <button
-            @click="$store.commit('SET_CURRENT_STEP', ($store.state.currentTutorialStep < $store.state.tutorialSteps.length - 1)? $store.state.currentTutorialStep + 1: 0)"
             class="bio-button _mgh-at _mgv-8px"
             style="background: #00DE91;border: solid #00DE91;font-family: poppins;font-weight: bold;letter-spacing: .75px;padding: 8px 40px;border-radius: 5px"
+            @click="clickNext()"
           >Next</button>
         </div>
       </div>
@@ -44,6 +48,15 @@ export default {
   components: {
     Header,
     Footer
+  },
+  methods: {
+    clickNext () {
+      if (this.$store.state.currentTutorialStep < this.$store.state.tutorialSteps.length - 1) {
+        this.$store.commit('SET_CURRENT_STEP', this.$store.state.currentTutorialStep + 1)
+      } else {
+        return window.location.href = '/lesson'
+      }
+    }
   }
 };
 </script>

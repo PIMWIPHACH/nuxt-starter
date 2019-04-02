@@ -3,7 +3,7 @@
     <!--  -->
     <div v-swiper:mySwiper="swiperOption">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
+        <!-- <div class="swiper-slide">
           <LessonCard title="Introduction"/>
         </div>
         <div class="swiper-slide">
@@ -11,6 +11,15 @@
         </div>
         <div class="swiper-slide">
           <LessonCard title="Mission 2"/>
+        </div> -->
+        <div 
+          v-for="(item, index) in $store.state.lessons" 
+          :key="index" 
+          class="swiper-slide">
+          <LessonCard 
+            :description="item.description"
+            :duration="item.duration" 
+            :title="item.name" />
         </div>
       </div>
       <!--  -->
@@ -25,12 +34,6 @@ export default {
   components: {
     LessonCard
   },
-  created() {
-    if (process.browser) {
-      const VueAwesomeSwiper = require("vue-awesome-swiper/dist/ssr");
-      Vue.use(VueAwesomeSwiper);
-    }
-  },
   data: () => ({
     pagination: {
       el: ".swiper-pagination",
@@ -40,7 +43,13 @@ export default {
       slidesPerView: 1.4,
       spaceBetween: 20
     }
-  })
+  }),
+  created() {
+    if (process.browser) {
+      const VueAwesomeSwiper = require("vue-awesome-swiper/dist/ssr");
+      Vue.use(VueAwesomeSwiper);
+    }
+  },
 };
 </script>
 

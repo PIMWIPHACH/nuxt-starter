@@ -7,10 +7,10 @@
           <div class="col-md-8 order-2 order-md-1">
             <div class="introduction">
               <h1 style="font-size: 1em; color: white;">KIDDEE</h1>
-              <h3
-                class="tagline"
-                style="font-family: merriweather;font-weight: light"
-              >Learn Interactive
+              <h3 
+                class="tagline" 
+                style="font-family: merriweather;font-weight: light">
+                Learn Interactive
                 <br>
                 <span style="font-family: merriweather;font-weight: bold">Design Thinking</span>
                 <br>
@@ -27,13 +27,15 @@
                       style="margin-top: 50px;"
                     >
                   </span>
-                  <button type="submit" class="btn btn-primary" align="left">Get Started</button>
+                  <nuxt-link 
+                    class="btn btn-primary" 
+                    to="/profile">Started</nuxt-link>
                 </a>
               </div>
             </div>
           </div>
 
-          <div class="col-md-4 order-1 order-md-2"></div>
+          <div class="col-md-4 order-1 order-md-2"/>
         </div>
       </div>
     </div>

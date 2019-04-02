@@ -28,40 +28,58 @@
     <div class="container">
       <div class="row no-gutters">
         <div class="col-4 _pdh-8px">
-          <div class="card" ref="point">
+          <div 
+            ref="point" 
+            class="card">
             <div class="card-block">
               <img
                 src="~/assets/images/point_star.svg"
                 style="weight: 24px;height: 24px;float: left;"
               >
-              <h2 class="number" style="color: #FFCD1C; font-weight: semi-bold;">100</h2>
-              <h4 class="card-title" style="margin-right: 50px;">Point</h4>
+              <h2 
+                class="number" 
+                style="color: #FFCD1C; font-weight: semi-bold;">100</h2>
+              <h4 
+                class="card-title" 
+                style="margin-right: 50px;">Point</h4>
             </div>
           </div>
         </div>
 
         <div class="col-4 _pdh-8px">
-          <div class="card" ref="achievement">
+          <div 
+            ref="achievement" 
+            class="card">
             <div class="card-block">
               <img
                 src="~/assets/images/achieve_diamond.svg"
                 style="weight: 24px;height: 24px;float: left;"
               >
-              <h2 class="number" style="color: #FF008A">1</h2>
-              <h4 class="card-title" style="margin-right: 5px;">Acheivement</h4>
+              <h2 
+                class="number" 
+                style="color: #FF008A">1</h2>
+              <h4 
+                class="card-title" 
+                style="margin-right: 5px;">Acheivement</h4>
             </div>
           </div>
         </div>
 
         <div class="col-4 _pdh-8px">
-          <div class="card" ref="fuel">
+          <div 
+            ref="fuel" 
+            class="card">
             <div class="card-block">
               <img
                 src="~/assets/images/icon_fuel.svg"
                 style="weight: 28px;height: 28px;float: left;"
               >
-              <h2 class="number" style="color: #FFCD1C">0</h2>
-              <h4 class="card-title" style="margin-right: 60px;">Fuel</h4>
+              <h2 
+                class="number" 
+                style="color: #FFCD1C">0</h2>
+              <h4 
+                class="card-title" 
+                style="margin-right: 60px;">Fuel</h4>
             </div>
           </div>
         </div>
@@ -72,15 +90,21 @@
     <div class="container">
       <div class="row">
         <div class="col-4">
-          <div ref="status" style="margin-left: 10px">
+          <div 
+            ref="status" 
+            style="margin-left: 10px">
             <h2 class="status">Status</h2>
-            <h3 class="episode" ref="episode">Episode 1</h3>
+            <h3 
+              ref="episode" 
+              class="episode">Episode 1</h3>
             <div class="_pdh-64px">
               <a href="#">
-                <button @click="startTutorial" class="btn">Get Started</button>
+                <button 
+                  class="btn" 
+                  @click="startTutorial">Get Started</button>
               </a>
             </div>
-            <div ref="complete"></div>
+            <div ref="complete"/>
           </div>
         </div>
       </div>
@@ -92,16 +116,6 @@
 export default {
   async asyncData({ store }) {
     store.commit("SET_HEADER_COLOR", "#0D1886");
-  },
-  methods: {
-    startTutorial() {
-      console.log("start tutorial");
-      this.$store.commit("SET_CURTAIN_VISIBLE", true);
-      // let ref = "fuel";
-      let currentStep = this.$store.state.currentTutorialStep;
-      let ref = this.$store.state.tutorialSteps[currentStep].ref;
-      this.$refs[ref].style.zIndex = 1;
-    }
   },
   watch: {
     "$store.state.currentTutorialStep"(val) {
@@ -124,7 +138,17 @@ export default {
       let ref = this.$store.state.tutorialSteps[val].ref;
       this.$refs[ref].style.zIndex = 1;
     }
-  }
+  },
+  methods: {
+    startTutorial() {
+      console.log("start tutorial");
+      this.$store.commit("SET_CURTAIN_VISIBLE", true);
+      // let ref = "fuel";
+      let currentStep = this.$store.state.currentTutorialStep;
+      let ref = this.$store.state.tutorialSteps[currentStep].ref;
+      this.$refs[ref].style.zIndex = 1;
+    }
+  },
 };
 </script>
 

@@ -5,7 +5,9 @@
       <div class="container _mgt-48px">
         <div class="row">
           <div style="margin-left: 25px;">
-            <h1 class="name" style="font-weight: bold;line-height: 1.25">
+            <h1 
+              class="name" 
+              style="font-weight: bold;line-height: 1.25">
               Supisara
               <br>Suwanrungruang
             </h1>
@@ -20,14 +22,20 @@
     <div class="container">
       <div class="row no-gutters">
         <div class="col-12 _pdh-8px">
-          <div class="progress-bar" style="display: inline-block">
+          <div 
+            class="progress-bar" 
+            style="display: inline-block">
             <div class="progress-bar">
-              <div class="w3-bar" style="margin-top: 0px;">
-                <button class="w3-btn" style="background-color: #82E024"></button>
-                <button class="w3-btn"></button>
-                <button class="w3-btn"></button>
-                <button class="w3-btn"></button>
-                <button class="w3-btn"></button>
+              <div 
+                class="w3-bar" 
+                style="margin-top: 0px;">
+                <button 
+                  class="w3-btn" 
+                  style="background-color: #82E024"/>
+                <button class="w3-btn"/>
+                <button class="w3-btn"/>
+                <button class="w3-btn"/>
+                <button class="w3-btn"/>
                 <button
                   class="w3-btn name"
                   style="margin-left: 0px;background-color: transparent;"
@@ -64,7 +72,9 @@
                 src="~/assets/images/achieve_diamond.svg"
                 style="weight: 18px;height: 18px;float: left;"
               >
-              <h2 class="number" style="color: #FF008A;font-size: 1.25em;margin-left: 10px;">1 / 10</h2>
+              <h2 
+                class="number" 
+                style="color: #FF008A;font-size: 1.25em;margin-left: 10px;">1 / 10</h2>
             </div>
           </div>
         </div>
@@ -76,7 +86,9 @@
                 src="~/assets/images/icon_fuel.svg"
                 style="weight: 22px;height: 22px;float: left;"
               >
-              <h2 class="number" style="color: #FFCD1C;font-size: 1.25em;">0</h2>
+              <h2 
+                class="number" 
+                style="color: #FFCD1C;font-size: 1.25em;">0</h2>
             </div>
           </div>
         </div>

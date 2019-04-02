@@ -6,60 +6,51 @@
         <div class="row">
           <div class="col-md-8 order-2 order-md-1">
             <div class="introduction">
-              <h1 style="font-size: 1em">DENO</h1>
-              <h3 class="tagline">Learn Interactive
+              <h1 style="font-size: 1em; color: white;">KIDDEE</h1>
+              <h3
+                class="tagline"
+                style="font-family: merriweather;font-weight: light"
+              >Learn Interactive
                 <br>
-                <span>Design Thinking</span>
+                <span style="font-family: merriweather;font-weight: bold">Design Thinking</span>
                 <br>
                 <span>Simply on your hand.</span>
               </h3>
+
               <div>
-                <p style="color:white">
-                  <br>เรียนรู้กระบวนการคิด Design Thinking
-                  <br>เพื่อฝึกทักษะการแก้ไขปัญหา สำหรับเยาวชนรุ่นใหม่
-                  <br>และความคิดสร้างสรรค์ในรูปแบบ Interactive Design
-                </p>
-              </div>
-              <span>
                 <a href="#">
+                  <span>
+                    <img
+                      arrow
+                      src="~/assets/images/arrow_white.svg"
+                      alt="Youth"
+                      style="margin-top: 50px;"
+                    >
+                  </span>
                   <button type="submit" class="btn btn-primary" align="left">Get Started</button>
                 </a>
-              </span>
+              </div>
             </div>
           </div>
 
-          <div class="col-md-4 order-1 order-md-2">
-            <div class="doodle1_image">
-              <img src="~/assets/images/standing-9.svg" alt="Youth">
-            </div>
-          </div>
+          <div class="col-md-4 order-1 order-md-2"></div>
         </div>
       </div>
     </div>
 
     <!-- How it works -->
-    <div class="container _mgv-64px">
+    <!--<div class="container _mgv-64px">
       <div class="row">
-        <div class="col-md-6" style="margin-right: 0">
-          <div style="margin-right: 10px">
-            <img class="_w-100pct" src="~/assets/images/sitting-1.svg" alt="Youth">
-          </div>
-        </div>
+        <div class="col-md-6" style="margin-right: 0"></div>
         <div class="col-md-6">
           <div align="left">
             <h4 style="color:white">How it works</h4>
           </div>
-          <p class="_pdh-64px" style="color:white">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua.
-          </p>
         </div>
       </div>
-    </div>
-
+    </div>-->
     <!-- Why Design Thinking? -->
-    <div class="container _mgb-128px">
+    <!--<div class="container _mgb-128px">
       <div class="row">
         <div class="col-12">
           <div style="margin-top: 20px">
@@ -77,10 +68,9 @@
           </div>
         </div>
       </div>
-    </div>
-
+    </div>-->
     <!-- Benefits of Design Thinking -->
-    <div class="container _mgv-64px">
+    <!--<div class="container _mgv-64px">
       <div class="row">
         <div class="col-12">
           <div align="middle">
@@ -130,9 +120,8 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="container _mgv-64px">
+    </div>-->
+    <!--<div class="container _mgv-64px">
       <div class="row">
         <div class="col-12">
           <div align="middle">
@@ -148,7 +137,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
 
@@ -202,7 +191,6 @@ h4 {
 h1 {
   color: orange;
   font-weight: 600;
-  margin-top: 30px;
   margin-bottom: 30px;
 }
 
@@ -213,9 +201,10 @@ h5 {
 
 .tagline {
   color: white;
-  font-weight: 600;
+  font-size: 32 px;
+  font-weight: 400;
   line-height: 1.5;
-  padding-right: 100px;
+  font-size: 32px;
 }
 
 p {
@@ -257,29 +246,25 @@ p {
 }
 
 .btn {
-  margin-left: 0px;
-  margin-bottom: 40px;
-  background-color: #82e024;
+  transition: 0.3s;
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 160px;
   border: none;
   border-radius: 30px;
   color: white;
-  padding: 12px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  border: 2.25px solid #82e024;
-  text-transform: uppercase;
+  border: none;
   font-weight: 600;
+  background-color: transparent;
 }
 
-.button:hover {
-  background-color: #d63c2a;
-}
-
-.button:active {
-  background-color: #d63c2a;
-  transform: translateY(4px);
+.btn:hover {
+  text-decoration: underline;
+  background-color: transparent;
 }
 
 * {

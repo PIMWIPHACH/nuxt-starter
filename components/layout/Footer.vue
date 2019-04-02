@@ -23,7 +23,6 @@ footer {
   position: relative;
   background: #000;
   padding: 32px 0px 32px 0px;
-  margin-top: 20px;
   color: #fff;
   @media (max-width: $md - 1px) {
     padding: 32px 0px;

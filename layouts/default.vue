@@ -18,7 +18,7 @@
             <div class="card-body">
               <h5
                 class="_cl-#192344 _tal-lt _mgv-16px _pdh-16px"
-                style="font-weight: bold;padding-top: 24px;"
+                style="font-weight: bold;padding-top: 24px;color:#FF9317"
               >{{ $store.state.tutorialSteps[$store.state.currentTutorialStep].topic }}</h5>
               <p
                 class="_cl-#192344 _tal-lt _mgv-36px _pdh-16px _pdv-16px"
@@ -29,7 +29,7 @@
           <button
             @click="$store.commit('SET_CURRENT_STEP', ($store.state.currentTutorialStep < $store.state.tutorialSteps.length - 1)? $store.state.currentTutorialStep + 1: 0)"
             class="bio-button _mgh-at _mgv-8px"
-            style="background: #82E024;border: solid #82E024;font-family: poppins;font-weight: bold;letter-spacing: .75px;padding: 8px 40px;border-radius: 5px"
+            style="background: #00DE91;border: solid #00DE91;font-family: poppins;font-weight: bold;letter-spacing: .75px;padding: 8px 40px;border-radius: 5px"
           >Next</button>
         </div>
       </div>
@@ -60,7 +60,7 @@ export default {
 .tut-panel {
   position: absolute;
   width: 100%;
-  bottom: 180px;
+  bottom: 280px;
   left: 0px;
 }
 
@@ -75,6 +75,7 @@ export default {
 .card {
   background: white;
   border-radius: 10px;
+  margin-top: 0px;
   margin-bottom: 36px;
 }
 </style>

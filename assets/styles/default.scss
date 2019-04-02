@@ -2,7 +2,7 @@ body {
   overflow: hidden;
   overflow-y: auto;
   max-width: 100% !important;
-  background-color: white;
+  background-color: #0d1886;
 }
 
 h1,
@@ -57,4 +57,8 @@ h6 {
 [lazy="loaded"] {
   opacity: 1;
   // background-size: 50px;
+}
+
+.swiper-container {
+  overflow: unset;
 }

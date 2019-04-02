@@ -2,7 +2,7 @@
   <div class="_w-100pct bg">
     <!-- Profile Head -->
     <div>
-      <div class="container _mgv-48px">
+      <div class="container _mgv-24px">
         <div class="row">
           <div class="col-6">
             <div class="doodle1_image">
@@ -25,7 +25,7 @@
     </div>
 
     <!-- Item Cards  -->
-    <div class="container _mgv-24px">
+    <div class="container">
       <div class="row no-gutters">
         <div class="col-4 _pdh-8px">
           <div class="card" ref="point">
@@ -69,20 +69,18 @@
     </div>
 
     <!-- Status -->
-    <div class="container _mgv-48px">
+    <div class="container">
       <div class="row">
-        <div class="col-12">
-          <div style="margin-left: 10px">
+        <div class="col-4">
+          <div ref="status" style="margin-left: 10px">
             <h2 class="status">Status</h2>
-            <p style="font-family: poppins;">
-              You haven’t finished
-              any achievement yet.
-            </p>
-            <div class="_pdh-64px _mgv-48px">
+            <h3 class="episode" ref="episode">Episode 1</h3>
+            <div class="_pdh-64px">
               <a href="#">
                 <button @click="startTutorial" class="btn">Get Started</button>
               </a>
             </div>
+            <div ref="complete"></div>
           </div>
         </div>
       </div>
@@ -93,7 +91,7 @@
 <script>
 export default {
   async asyncData({ store }) {
-    store.commit("SET_HEADER_COLOR", "#161878");
+    store.commit("SET_HEADER_COLOR", "#0D1886");
   },
   methods: {
     startTutorial() {
@@ -113,11 +111,16 @@ export default {
         this.$refs["point"].style.zIndex = 0;
         this.$refs["achievement"].style.zIndex = 0;
         this.$refs["fuel"].style.zIndex = 0;
+        this.$refs["status"].style.zIndex = 0;
+        this.$refs["episode"].style.zIndex = 0;
         return;
       }
       this.$refs["point"].style.zIndex = 0;
       this.$refs["achievement"].style.zIndex = 0;
       this.$refs["fuel"].style.zIndex = 0;
+      this.$refs["status"].style.zIndex = 0;
+      this.$refs["episode"].style.zIndex = 0;
+
       let ref = this.$store.state.tutorialSteps[val].ref;
       this.$refs[ref].style.zIndex = 1;
     }
@@ -136,7 +139,7 @@ body {
 }
 
 .bg {
-  background-image: url(~assets/images/Background_profile.svg);
+  background-image: url(~assets/images/Background_intro.svg);
   background-repeat: no-repeat;
   background-position: top left;
   background-size: auto;
@@ -205,16 +208,26 @@ h4 {
   font-family: poppins;
   font-weight: bold;
   letter-spacing: 0.5px;
-  background-color: #f0edff;
-  height: 250px;
-  width: 250px;
+  background-color: #01c480;
+  height: 220px;
+  width: 220px;
   border-radius: 500px;
-  color: darkblue;
-  border: 2.25px solid #f0edff;
+  color: white;
+  font-size: 1.2em;
+  border: 2.25px solid #01c480;
+  margin-bottom: 100px;
+  margin-top: 20px;
 }
 
 .status {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: bold;
+  color: white;
+}
+
+.episode {
+  margin-top: 20px;
+  font-size: 1em;
+  color: white;
 }
 </style>

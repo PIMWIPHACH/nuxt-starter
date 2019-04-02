@@ -29,6 +29,24 @@ export const state = () => ({
       topic: "Fuel",
       description:
         "You need to have fuel everytime unless you can’t travel to another planet to complete missions."
+    },
+    {
+      ref: "status",
+      topic: "Status",
+      description:
+        "The Status tells you where you are now in your journey to remind you how many journey you have left."
+    },
+    {
+      ref: "episode",
+      topic: "Episode",
+      description:
+        "To be able to completed each mission, you need to learn Design Thinking process and use the principles to solve it."
+    },
+    {
+      ref: "complete",
+      topic: "Good Job!",
+      description:
+        "You just receive 400 points. It’s great to start with a small action, but there is much more to come. Let’s go ahead to Episode 1."
     }
   ],
   currentTutorialStep: 0
@@ -71,7 +89,11 @@ export const actions = {
       },
       {
         title: "Profile",
-        path: "profile"
+        path: "Profile "
+      },
+      {
+        title: "Lesson",
+        path: "Lesson"
       }
     ];
     const footerMenu = primaryMenu;

@@ -26,16 +26,8 @@
               :key="i"
               class="_pst-rlt list-title _cs-pt _zid-1"
             >
-              <div class="_pdt-16px _pdbt-8px _pdv-0px-md title">
+              <div class="_pdt-4px _pdbt-4px title">
                 <!-- Icon -->
-                <div v-if="item.submenu">
-                  <i :class="item.icon" class="fa-fw fa-md"/>
-                  <span class="_pst-rlt _t-2px" v-html="item.title"/>
-                </div>
-                <nuxt-link v-else :to="localePath(item.path)">
-                  <i :class="item.icon" class="fa-fw fa-md"/>
-                  <span class="_pst-rlt _t-2px" v-html="item.title"/>
-                </nuxt-link>
               </div>
               <div v-if="item.submenu" class="dropdown _pst-asl-md">
                 <!-- [Mobile only] Down arrow -->
@@ -155,10 +147,10 @@ header {
       left: 0;
       right: 0;
       padding: 64px 12px 32px 12px;
-      background: rgba(255, 255, 255, 0.9);
+      background: #0d1886;
       z-index: 0;
       box-shadow: 0px 10px 40px -5px rgba(0, 0, 0, 0.1);
-      color: white;
+      color: #0d1886;
       &.-show-mobile {
         visibility: visible;
         opacity: 1;

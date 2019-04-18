@@ -10,13 +10,9 @@
     </main>
     <Footer/>
     <!-- Curtain -->
-    <div 
-      v-if="$store.state.isCurtainVisible" 
-      class="curtain">
+    <div v-if="$store.state.isCurtainVisible" class="curtain">
       <!-- Tutorial Panel -->
-      <div 
-        class="content _tal-lt" 
-        style="margin-bottom: 128px">
+      <div class="content _tal-lt" style="margin-bottom: 128px">
         <div class="tut-panel">
           <div class="card _tal-lt _mgh-24px">
             <div class="card-body">
@@ -50,11 +46,17 @@ export default {
     Footer
   },
   methods: {
-    clickNext () {
-      if (this.$store.state.currentTutorialStep < this.$store.state.tutorialSteps.length - 1) {
-        this.$store.commit('SET_CURRENT_STEP', this.$store.state.currentTutorialStep + 1)
+    clickNext() {
+      if (
+        this.$store.state.currentTutorialStep <
+        this.$store.state.tutorialSteps.length - 1
+      ) {
+        this.$store.commit(
+          "SET_CURRENT_STEP",
+          this.$store.state.currentTutorialStep + 1
+        );
       } else {
-        return window.location.href = '/lesson'
+        return (window.location.href = "/lesson");
       }
     }
   }

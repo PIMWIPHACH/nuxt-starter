@@ -50,25 +50,32 @@ export const state = () => ({
     }
   ],
   currentTutorialStep: 0,
-  lessons: [{
-    name: 'Introduction',
-    slug: 'introduction',
-    duration: '15 - 30 Mins',
-    description: 'lorem',
-    backgroundImage: ''
-  }, {
-    name: 'Mission 1',
-    slug: 'mission-1',
-    duration: '30 - 45 Mins',
-    description: 'lorem',
-    backgroundImage: ''
-  }, {
-    name: 'Mission 2',
-    slug: 'mission-2',
-    duration: '30 - 60 Mins',
-    description: 'loremsssss',
-    backgroundImage: ''
-  }]
+  lessons: [
+    {
+      name: "Introduction",
+      slug: "introduction",
+      duration: "15 - 30 Mins",
+      description:
+        "“Imagine you have a mission to save our planet. You need to know about tools.. Let’s find out!”",
+      backgroundImage: "/images/card_lesson1.svg"
+    },
+    {
+      name: "Mission 1",
+      slug: "mission-1",
+      duration: "30 - 45 Mins",
+      description:
+        "“Imagine you have a mission to save our planet. You need to know about tools.. Let’s find out!”",
+      backgroundImage: "/images/card_lesson2.svg"
+    },
+    {
+      name: "Mission 2",
+      slug: "mission-2",
+      duration: "30 - 60 Mins",
+      description:
+        "“Imagine you have a mission to save our planet. You need to know about tools.. Let’s find out!”",
+      backgroundImage: "/images/card_lesson2.svg"
+    }
+  ]
 });
 
 export const actions = {

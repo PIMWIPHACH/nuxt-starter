@@ -28,58 +28,40 @@
     <div class="container">
       <div class="row no-gutters">
         <div class="col-4 _pdh-8px">
-          <div 
-            ref="point" 
-            class="card">
+          <div ref="point" class="card">
             <div class="card-block">
               <img
                 src="~/assets/images/point_star.svg"
                 style="weight: 24px;height: 24px;float: left;"
               >
-              <h2 
-                class="number" 
-                style="color: #FFCD1C; font-weight: semi-bold;">100</h2>
-              <h4 
-                class="card-title" 
-                style="margin-right: 50px;">Point</h4>
+              <h2 class="number" style="color: #FFCD1C; font-weight: semi-bold;">100</h2>
+              <h4 class="card-title" style="margin-right: 50px;">Point</h4>
             </div>
           </div>
         </div>
 
         <div class="col-4 _pdh-8px">
-          <div 
-            ref="achievement" 
-            class="card">
+          <div ref="achievement" class="card">
             <div class="card-block">
               <img
                 src="~/assets/images/achieve_diamond.svg"
                 style="weight: 24px;height: 24px;float: left;"
               >
-              <h2 
-                class="number" 
-                style="color: #FF008A">1</h2>
-              <h4 
-                class="card-title" 
-                style="margin-right: 5px;">Acheivement</h4>
+              <h2 class="number" style="color: #FF008A">1</h2>
+              <h4 class="card-title" style="margin-right: 5px;">Acheivement</h4>
             </div>
           </div>
         </div>
 
         <div class="col-4 _pdh-8px">
-          <div 
-            ref="fuel" 
-            class="card">
+          <div ref="fuel" class="card">
             <div class="card-block">
               <img
                 src="~/assets/images/icon_fuel.svg"
                 style="weight: 28px;height: 28px;float: left;"
               >
-              <h2 
-                class="number" 
-                style="color: #FFCD1C">0</h2>
-              <h4 
-                class="card-title" 
-                style="margin-right: 60px;">Fuel</h4>
+              <h2 class="number" style="color: #FFCD1C">0</h2>
+              <h4 class="card-title" style="margin-right: 60px;">Fuel</h4>
             </div>
           </div>
         </div>
@@ -89,23 +71,24 @@
     <!-- Status -->
     <div class="container">
       <div class="row">
-        <div class="col-4">
-          <div 
-            ref="status" 
-            style="margin-left: 10px">
+        <div class="col-6">
+          <div ref="status" style="margin-left: 10px">
             <h2 class="status">Status</h2>
-            <h3 
-              ref="episode" 
-              class="episode">Episode 1</h3>
-            <div class="_pdh-64px">
-              <a href="#">
-                <button 
-                  class="btn" 
-                  @click="startTutorial">Get Started</button>
-              </a>
-            </div>
-            <div ref="complete"/>
+            <h3 ref="episode" class="episode"></h3>
           </div>
+        </div>
+
+        <div class="status-desc">
+          <p>
+            “You haven’t finished
+            any achievement yet."
+          </p>
+        </div>
+
+        <div ref="complete" class="_mth-24px _pdh-64px">
+          <a href="#">
+            <button class="btn" @click="startTutorial">Start</button>
+          </a>
         </div>
       </div>
     </div>
@@ -148,7 +131,7 @@ export default {
       let ref = this.$store.state.tutorialSteps[currentStep].ref;
       this.$refs[ref].style.zIndex = 1;
     }
-  },
+  }
 };
 </script>
 
@@ -228,19 +211,26 @@ h4 {
   margin-left: 0px;
 }
 
+.status-desc {
+  text-align: center;
+  color: white;
+  font-family: poppins;
+  margin: auto;
+  margin-top: 30px;
+}
+
 .btn {
   font-family: poppins;
   font-weight: bold;
   letter-spacing: 0.5px;
   background-color: #01c480;
-  height: 220px;
-  width: 220px;
-  border-radius: 500px;
   color: white;
   font-size: 1.2em;
   border: 2.25px solid #01c480;
+  padding: 15px 80px;
   margin-bottom: 100px;
   margin-top: 20px;
+  border-radius: 30px;
 }
 
 .status {
@@ -253,5 +243,6 @@ h4 {
   margin-top: 20px;
   font-size: 1em;
   color: white;
+  text-align: center;
 }
 </style>

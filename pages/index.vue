@@ -7,9 +7,7 @@
           <div class="col-md-8 order-2 order-md-1">
             <div class="introduction">
               <h1 style="font-size: 1em; color: white;">KIDDEE</h1>
-              <h3 
-                class="tagline" 
-                style="font-family: merriweather;font-weight: light">
+              <h3 class="tagline" style="font-family: merriweather;font-weight: light">
                 Learn Interactive
                 <br>
                 <span style="font-family: merriweather;font-weight: bold">Design Thinking</span>
@@ -19,17 +17,7 @@
 
               <div>
                 <a href="#">
-                  <span>
-                    <img
-                      arrow
-                      src="~/assets/images/arrow_white.svg"
-                      alt="Youth"
-                      style="margin-top: 50px;"
-                    >
-                  </span>
-                  <nuxt-link 
-                    class="btn btn-primary" 
-                    to="/profile">Started</nuxt-link>
+                  <nuxt-link class="btn btn-primary" to="/profile">Play</nuxt-link>
                 </a>
               </div>
             </div>
@@ -153,7 +141,7 @@ export default {
 
 <style lang="scss" scoped>
 .bg {
-  background-image: url(~assets/images/Background2.svg);
+  background-image: url(~assets/images/background2.svg);
   background-repeat: no-repeat;
   background-position: top right;
   background-size: auto;
@@ -203,7 +191,6 @@ h5 {
 
 .tagline {
   color: white;
-  font-size: 32 px;
   font-weight: 400;
   line-height: 1.5;
   font-size: 32px;
@@ -250,8 +237,8 @@ p {
 .btn {
   transition: 0.3s;
   position: relative;
-  margin-top: 50px;
-  margin-bottom: 160px;
+  margin-top: 15px;
+  margin-bottom: 285px;
   border: none;
   border-radius: 30px;
   color: white;
@@ -261,7 +248,8 @@ p {
   font-size: 16px;
   border: none;
   font-weight: 600;
-  background-color: transparent;
+  background-color: #00de91;
+  padding: 15px 60px;
 }
 
 .btn:hover {

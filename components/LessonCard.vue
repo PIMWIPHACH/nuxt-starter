@@ -1,20 +1,14 @@
 <template>
-  <div class="card">
-    <h2 
-      class="location" 
-      style="text-align: left;">{{ location }}</h2>
-    <h2 
-      class="introduction" 
-      style="text-align: left;">{{ title }}</h2>
+  <div class="card" :style="`background-image: url(${bgImage});`">
+    <h2 class="location" style="text-align: left;">{{ location }}</h2>
+    <h2 class="introduction" style="text-align: left;">{{ title }}</h2>
     <div style="padding: 0px;">
       <img
         src="~/assets/images/point_star.svg"
         style="weight: 18px;height: 18px;float: left;margin-right: 10px"
       >
       <div>
-        <p 
-          class="time" 
-          style="font-family: poppins;text-align: left;">{{ duration }}</p>
+        <p class="time" style="font-family: poppins;text-align: left;">{{ duration }}</p>
       </div>
 
       <div>
@@ -47,10 +41,13 @@ export default {
     location: {
       type: String,
       default: ""
+    },
+    bgImage: {
+      type: String,
+      default: ""
     }
   },
-  data: () => ({
-  }),
+  data: () => ({}),
   // Define methods
   methods: {
     // Create a method (function)
@@ -65,7 +62,7 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-  background-image: url(~assets/images/card_lesson1.svg);
+  // background-image: url(~assets/images/card_lesson1.svg);
   font-family: "poppins";
   position: relative;
   padding-top: 15px;
@@ -107,7 +104,7 @@ export default {
 }
 
 .lesson-description {
-  margin-bottom: 60px;
+  margin-bottom: 140px;
   font-size: 0.8em;
   font-weight: bold;
   color: #151862;
@@ -123,6 +120,7 @@ button {
   padding-top: 12px;
   padding-bottom: 12px;
   border-radius: 5px;
+  margin-top: 25px;
   background-color: #00de91;
   border: 2.25px solid #00de91;
 }

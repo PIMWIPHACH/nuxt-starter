@@ -11,15 +11,14 @@
         </div>
         <div class="swiper-slide">
           <LessonCard title="Mission 2"/>
-        </div> -->
-        <div 
-          v-for="(item, index) in $store.state.lessons" 
-          :key="index" 
-          class="swiper-slide">
-          <LessonCard 
+        </div>-->
+        <div v-for="(item, index) in $store.state.lessons" :key="index" class="swiper-slide">
+          <LessonCard
+            :bgImage="item.backgroundImage"
             :description="item.description"
-            :duration="item.duration" 
-            :title="item.name" />
+            :duration="item.duration"
+            :title="item.name"
+          />
         </div>
       </div>
       <!--  -->
@@ -49,7 +48,7 @@ export default {
       const VueAwesomeSwiper = require("vue-awesome-swiper/dist/ssr");
       Vue.use(VueAwesomeSwiper);
     }
-  },
+  }
 };
 </script>
 

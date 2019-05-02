@@ -14,7 +14,7 @@
       <!-- Tutorial Panel -->
       <div class="content _tal-lt" style="margin-bottom: 128px">
         <div class="tut-panel">
-          <div class="card _tal-lt _mgh-24px">
+          <div class="card _tal-lt _mgh-24px _mgv-48px">
             <div class="card-body">
               <h5
                 class="_cl-#192344 _tal-lt _mgv-16px _pdh-24px"

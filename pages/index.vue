@@ -2,7 +2,7 @@
   <div class="_w-100pct bg">
     <!-- intro -->
     <div>
-      <div class="container _mgv-128px">
+      <div class="container _mgv-64px">
         <div class="row">
           <div class="col-md-8 order-2 order-md-1">
             <div class="introduction">

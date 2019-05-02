@@ -34,20 +34,20 @@
                   style="font-size:20px;"
                 >{{ item.headline }}</div>
                 <div
-                  class="_dp-f _mgv-12px _jtfct-spbtw"
-                  style="font-size:18px;line-height: 1.5;margin-top:20px;margin-bottom:20px;"
+                  class="_dp-f _jtfct-spbtw"
+                  style="font-size:18px;line-height: 1.5;margin-top:20px;margin-bottom:40px;"
                 >{{ item.desc }}</div>
                 <div
-                  class="_dp-f _mgv-12px _jtfct-spbtw"
-                  style="font-size:18px;line-height: 1.5;margin-top:20px;margin-bottom:20px;"
+                  class="_dp-f _jtfct-spbtw"
+                  style="font-size:18px;line-height: 1.5;margin-top:20px;margin-bottom:160px;color:#5881EC;"
                 >{{ item.swipe }}</div>
                 <div
                   class="_dp-f _mgv-12px _jtfct-spbtw"
-                  style="font-size:16px;font-weight: bold;line-height: 1.5;margin-top:20px;margin-bottom:20px;"
+                  style="font-size:14px;font-weight: bold;line-height: 1.5;margin-top:20px;margin-bottom:20px;"
                 >{{ item.reference }}</div>
                 <nuxt-link
                   class="_dp-f _mgv-12px _jtfct-spbtw"
-                  style="font-size:18px;line-height: 1.5;margin-top:20px;margin-bottom:20px"
+                  style="font-size:18px;line-height: 1.5;text-align:right;"
                   to="/lesson/introduction/quiz"
                 >{{ item.btn }}</nuxt-link>
               </div>
@@ -77,15 +77,15 @@ export default {
         btn: ""
       },
       {
-        headline: "",
+        headline: "   ",
         desc:
           "The design thinking-based framework popularized by the Stanford d.school can help your team take on the thorniest challenges with insightful solutions..",
         swipe: "(Swipe left for continue..)",
-        reference: "",
-        btn: ""
+        reference: "   ",
+        btn: "   "
       },
       {
-        headline: "",
+        headline: "   ",
         desc:
           "In this guide, you’ll learn how to put design thinking into practice in your skill..",
         swipe: "(Swipe left for continue..)",
@@ -136,13 +136,13 @@ export default {
 .card {
   font-family: "poppins";
   position: relative;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
   padding-bottom: 40px;
   min-height: 70px;
   border-radius: 10px;
-  box-shadow: 0px 6px 20px 0px rgba(160, 160, 160, 0.3);
+  box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.3);
   text-align: center;
   transition: all 0.7s;
   background-color: white;

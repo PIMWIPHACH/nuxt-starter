@@ -5,8 +5,8 @@
       - Change moment.js locale
   -->
   <header
-    :style="'background-color: ' + $store.state.headerColor"
-    :class="{'has-shadow animate sticky _bgcl-white': $store.state.menuSticky && !$store.state.isMobileMenuActive}"
+    :style="'background-color: #161966;'"
+    :class="{'has-shadow animate sticky _bgcl-aqua':$store.state.menuSticky && !$store.state.isMobileMenuActive}"
   >
     <div class="container">
       <div class="menu-container">
@@ -105,6 +105,10 @@ export default {
   }
 }
 
+.bgcl-blue {
+  background-color: aqua;
+}
+
 header {
   padding: 18px 0px;
 }
@@ -127,12 +131,14 @@ header {
   /* padding: 0px 12px; */
   #hamburger {
     display: none;
+    color: white;
   }
   /* Menu Mobile */
   @media (max-width: $md - 1px) {
     /* Show hamburger */
     #hamburger {
       display: block;
+      color: white;
     }
     /* Make nav a modal */
     nav {

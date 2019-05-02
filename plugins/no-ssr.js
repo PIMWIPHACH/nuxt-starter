@@ -9,7 +9,7 @@ Vue.use(VueFloatLabel);
 
 WebFont.load({
   google: {
-    families: ["Poppins", "Bai Jamjuree", "Merriweather"]
+    families: ["Poppins", "Bai Jamjuree"]
   }
 });
 

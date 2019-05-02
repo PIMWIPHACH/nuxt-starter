@@ -11,7 +11,9 @@
     <div class="container">
       <div class="menu-container">
         <!-- Branding -->
-        <nuxt-link id="branding" :to="localePath('index')">Logo</nuxt-link>
+        <nuxt-link id="branding" :to="localePath('index')">
+          <img src="~/assets/images/logo-deno.svg">
+        </nuxt-link>
         <!-- Menu -->
         <nav
           :class="{'-show-mobile': $store.state.isMobileMenuActive}"

@@ -4,11 +4,14 @@
     <h2 class="introduction" style="text-align: left;">{{ title }}</h2>
     <div style="padding: 0px;">
       <img
-        src="~/assets/images/point_star.svg"
+        src="~/assets/images/icon-clock.svg"
         style="weight: 18px;height: 18px;float: left;margin-right: 10px"
       >
       <div>
         <p class="time" style="font-family: poppins;text-align: left;">{{ duration }}</p>
+      </div>
+      <div class="_tal-l">
+        <p class="level">{{ level }}</p>
       </div>
 
       <div>
@@ -18,7 +21,8 @@
         >{{ description }}</p>
       </div>
       <!--  -->
-      <button @click="changeDescription">Play</button>
+      <nuxt-link class="playBtn" to="/lesson/introduction">Play</nuxt-link>
+      <!-- <button @click="changeDescription">Play</button> -->
     </div>
   </div>
 </template>
@@ -35,6 +39,10 @@ export default {
       default: ""
     },
     description: {
+      type: String,
+      default: ""
+    },
+    level: {
       type: String,
       default: ""
     },
@@ -67,13 +75,13 @@ export default {
   position: relative;
   padding-top: 15px;
   padding-left: 15px;
+  padding-right: 15px;
   padding-bottom: 40px;
   min-height: 70px;
   border-radius: 10px;
   box-shadow: 0px 6px 20px 0px rgba(160, 160, 160, 0.3);
   text-align: center;
   transition: all 0.7s;
-  border-bottom: 6px solid #b1c7ff;
   background-color: white;
   margin-bottom: 40px;
   &:hover {
@@ -85,32 +93,33 @@ export default {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 0.8em;
-  font-weight: bold;
+  font-weight: semi-bold;
   color: #151862;
 }
 
 .introduction {
   margin-bottom: 10px;
-  font-size: 1.6em;
+  font-size: 1em;
   font-weight: bold;
   color: #151862;
+  margin-bottom: 20px;
 }
 
 .time {
   margin-bottom: 20px;
   font-size: 0.8em;
-  font-weight: bold;
+  font-weight: regular;
   color: #151862;
 }
 
 .lesson-description {
   margin-bottom: 140px;
   font-size: 0.8em;
-  font-weight: bold;
+  font-weight: regular;
   color: #151862;
 }
 
-button {
+.playBtn {
   text-align: center;
   color: white;
   font-family: poppins;
@@ -119,9 +128,20 @@ button {
   padding-left: 85px;
   padding-top: 12px;
   padding-bottom: 12px;
-  border-radius: 5px;
-  margin-top: 25px;
+  border-radius: 30px;
   background-color: #00de91;
   border: 2.25px solid #00de91;
+}
+
+.level {
+  display: inline;
+  font-size: 0.4em;
+  color: white;
+  background-color: #151862;
+  margin-top: 10px;
+  margin-left: 0px;
+  padding: 2px 18px 2px;
+  border-radius: 30px;
+  text-align: left;
 }
 </style>

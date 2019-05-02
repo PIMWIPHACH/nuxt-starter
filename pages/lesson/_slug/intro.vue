@@ -96,7 +96,7 @@ body {
 }
 
 .bg {
-  background-image: url(~assets/images/Background_intro.svg);
+  background-image: url(~assets/images/background_intro.svg);
   background-repeat: no-repeat;
   background-position: top left;
   background-size: auto;

@@ -8,14 +8,14 @@
             <div class="doodle1_image">
               <img
                 class="_w-24pct"
-                style="margin-top: 60px"
-                src="~/assets/images/Profile.svg"
+                style="margin-top: 20px;width:120px;height:120;"
+                src="~/assets/images/profile.svg"
                 alt="Youth"
               >
             </div>
           </div>
           <div class="col-6 _pdh-0px">
-            <h1 class="name">Drew Barrymore</h1>
+            <h1 class="name" style="line-height:1.25;">Supisara Suwanrungruang</h1>
             <h3>
               <span class="level">Beginner</span>
             </h3>
@@ -87,7 +87,7 @@
 
         <div ref="complete" class="_mth-24px _pdh-64px">
           <a href="#">
-            <button class="btn" @click="startTutorial">Start</button>
+            <button class="btn" @click="startTutorial">Start Tutorial</button>
           </a>
         </div>
       </div>
@@ -98,7 +98,7 @@
 <script>
 export default {
   async asyncData({ store }) {
-    store.commit("SET_HEADER_COLOR", "#0D1886");
+    store.commit("SET_HEADER_COLOR", "#161966");
   },
   watch: {
     "$store.state.currentTutorialStep"(val) {
@@ -117,9 +117,11 @@ export default {
       this.$refs["fuel"].style.zIndex = 0;
       this.$refs["status"].style.zIndex = 0;
       this.$refs["episode"].style.zIndex = 0;
-
+      console.log(val, this.$store.state.tutorialSteps.length);
       let ref = this.$store.state.tutorialSteps[val].ref;
-      this.$refs[ref].style.zIndex = 1;
+      if (val < this.$store.state.tutorialSteps.length - 1) {
+        this.$refs[ref].style.zIndex = 2;
+      }
     }
   },
   methods: {
@@ -129,7 +131,7 @@ export default {
       // let ref = "fuel";
       let currentStep = this.$store.state.currentTutorialStep;
       let ref = this.$store.state.tutorialSteps[currentStep].ref;
-      this.$refs[ref].style.zIndex = 1;
+      this.$refs[ref].style.zIndex = 2;
     }
   }
 };
@@ -146,7 +148,7 @@ body {
 }
 
 .bg {
-  background-image: url(~assets/images/Background_intro.svg);
+  background-image: url(~assets/images/background_tutorial.svg);
   background-repeat: no-repeat;
   background-position: top left;
   background-size: auto;
@@ -186,7 +188,7 @@ h2 {
   font-weight: bold;
   color: white;
   margin-bottom: 0px;
-  margin-top: 90px;
+  margin-top: 40px;
   letter-spacing: 0.25px;
 }
 
@@ -223,13 +225,14 @@ h4 {
   font-family: poppins;
   font-weight: bold;
   letter-spacing: 0.5px;
-  background-color: #01c480;
+  background-color: #ff9317;
   color: white;
   font-size: 1.2em;
-  border: 2.25px solid #01c480;
-  padding: 15px 80px;
-  margin-bottom: 100px;
-  margin-top: 20px;
+  border: 2.25px solid #ff9317;
+  padding: 18px 60px;
+  margin-bottom: 130px;
+  margin-top: 50px;
+  margin-left: 10px;
   border-radius: 30px;
 }
 
@@ -237,6 +240,7 @@ h4 {
   font-size: 1.2em;
   font-weight: bold;
   color: white;
+  margin-top: 40px;
 }
 
 .episode {

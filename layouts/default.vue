@@ -17,20 +17,32 @@
           <div class="card _tal-lt _mgh-24px">
             <div class="card-body">
               <h5
-                class="_cl-#192344 _tal-lt _mgv-16px _pdh-16px"
-                style="font-weight: bold;padding-top: 24px;color:#FF9317"
+                class="_cl-#192344 _tal-lt _mgv-16px _pdh-24px"
+                style="font-weight: bold;padding-top: 24px;color:#FF9317;"
               >{{ $store.state.tutorialSteps[$store.state.currentTutorialStep].topic }}</h5>
+              <!--  -->
               <p
-                class="_cl-#192344 _tal-lt _mgv-36px _pdh-16px _pdv-16px"
-                style="font-family: poppins;font-size: 14px;"
+                class="_cl-#192344 _tal-lt _mgv-36px _pdh-24px _pdv-24px"
+                style="font-family: poppins;font-size: 16px;"
               >{{ $store.state.tutorialSteps[$store.state.currentTutorialStep].description }}</p>
+              <img
+                class="_w-80pct _mgh-at _dp-b"
+                v-if="$store.state.tutorialSteps[$store.state.currentTutorialStep].image"
+                :src="$store.state.tutorialSteps[$store.state.currentTutorialStep].image"
+                alt
+              >
+              <!-- You receive points -->
+              <div
+                class="receive-point"
+                v-if="$store.state.tutorialSteps[$store.state.currentTutorialStep].image"
+              ></div>
             </div>
           </div>
           <button
             class="bio-button _mgh-at _mgv-8px"
-            style="background: #00DE91;border: solid #00DE91;font-family: poppins;font-weight: bold;letter-spacing: .75px;padding: 8px 40px;border-radius: 5px"
+            style="background: #00DE91;border: solid #00DE91;font-family: poppins;font-weight: bold;letter-spacing: .75px; padding: 12px 0px; width: 90%;border-radius: 30px"
             @click="clickNext()"
-          >Next</button>
+          >{{ $store.state.tutorialSteps[$store.state.currentTutorialStep].btnText || 'Next' }}</button>
         </div>
       </div>
     </div>
@@ -71,12 +83,22 @@ export default {
   width: 100vw;
   height: 130vh;
   background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
 }
 .tut-panel {
   position: absolute;
   width: 100%;
   bottom: 280px;
   left: 0px;
+}
+
+.receive-point {
+  font-family: poppins;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  color: #ff9317;
+  font-weight: bold;
 }
 
 .arrow {

@@ -9,9 +9,6 @@
               Supisara
               <br>Suwanrungruang
             </h1>
-            <h3>
-              <div class="level">Beginner</div>
-            </h3>
           </div>
         </div>
       </div>
@@ -30,7 +27,7 @@
                 <button class="w3-btn"/>
                 <button
                   class="w3-btn name"
-                  style="margin-left: 0px;background-color: transparent;"
+                  style="margin-left: 0px;background-color: transparent;font-family: poppins;"
                 >20%</button>
               </div>
             </div>
@@ -116,7 +113,7 @@ body {
 }
 
 .bg {
-  background-image: url(~assets/images/Background_intro.svg);
+  background-image: url(~assets/images/background_intro.svg);
   background-repeat: no-repeat;
   background-position: top left;
   background-size: auto;

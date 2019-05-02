@@ -43,37 +43,68 @@ export const state = () => ({
         "To be able to completed each mission, you need to learn Design Thinking process and use the principles to solve it."
     },
     {
-      ref: "complete",
-      topic: "Good Job!",
-      description:
-        "You just receive 400 points. It’s great to start with a small action, but there is much more to come. Let’s go ahead to Episode 1."
+      ref: "",
+      topic: "",
+      description: "",
+      btnText: "Start Mission 1",
+      image: "/images/reward-tutorial.png"
     }
   ],
   currentTutorialStep: 0,
   lessons: [
     {
-      name: "Introduction",
+      name: "00 Why Design Thinking?",
       slug: "introduction",
       duration: "15 - 30 Mins",
+      level: "Beginner",
       description:
-        "“Imagine you have a mission to save our planet. You need to know about tools.. Let’s find out!”",
+        "“Short introduction about what is Design Thinking and why is important to understand to you.”",
       backgroundImage: "/images/card_lesson1.svg"
     },
     {
-      name: "Mission 1",
+      name: "01 Empathize",
       slug: "mission-1",
       duration: "30 - 45 Mins",
+      level: "Beginner",
       description:
-        "“Imagine you have a mission to save our planet. You need to know about tools.. Let’s find out!”",
+        "“You will work to solves other’s problems and innovative design work begins with Empathy!”",
       backgroundImage: "/images/card_lesson2.svg"
     },
     {
-      name: "Mission 2",
+      name: "02 Define",
       slug: "mission-2",
       duration: "30 - 60 Mins",
+      level: "Beginner",
+      description:
+        "“You will learn to reframe your point of view based on insights from your users can be powerful design tool.”",
+      backgroundImage: "/images/card_lesson3.svg"
+    },
+    {
+      name: "03 Ideate",
+      slug: "mission-3",
+      duration: "30 - 60 Mins",
+      level: "Beginner",
       description:
         "“Imagine you have a mission to save our planet. You need to know about tools.. Let’s find out!”",
-      backgroundImage: "/images/card_lesson2.svg"
+      backgroundImage: "/images/card_lesson4.svg"
+    },
+    {
+      name: "04 Prototype",
+      slug: "mission-4",
+      duration: "30 - 60 Mins",
+      level: "Beginner",
+      description:
+        "“You will learn to build prototypes throughout the design process. Get smarter, faster!”",
+      backgroundImage: "/images/card_lesson5.svg"
+    },
+    {
+      name: "05 Test",
+      slug: "mission-5",
+      duration: "30 - 60 Mins",
+      level: "Beginner",
+      description:
+        "“Learn to observe how your end user approaches your product give you the most important feedback of all.”",
+      backgroundImage: "/images/card_lesson6.svg"
     }
   ]
 });
@@ -131,12 +162,12 @@ export const actions = {
       req.headers["user-agent"]
     );
     console.log(isBrowserSupported);
-    if (!isBrowserSupported)
-      return redirect(
-        app.localePath({
-          name: "unsupported"
-        })
-      );
+    // if (!isBrowserSupported)
+    //   return redirect(
+    //     app.localePath({
+    //       name: "unsupported"
+    //     })
+    //   );
     return;
   }
 };

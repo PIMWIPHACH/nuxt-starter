@@ -18,6 +18,7 @@
             :description="item.description"
             :duration="item.duration"
             :title="item.name"
+            :level="item.level"
           />
         </div>
       </div>

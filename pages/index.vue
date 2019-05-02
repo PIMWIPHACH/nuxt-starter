@@ -6,11 +6,11 @@
         <div class="row">
           <div class="col-md-8 order-2 order-md-1">
             <div class="introduction">
-              <h1 style="font-size: 1em; color: white;">KIDDEE</h1>
-              <h3 class="tagline" style="font-family: merriweather;font-weight: light">
+              <h1 style="font-size: 1em; color: white;">Deno</h1>
+              <h3 class="tagline" style="font-family: poppins;font-weight: light">
                 Learn Interactive
                 <br>
-                <span style="font-family: merriweather;font-weight: bold">Design Thinking</span>
+                <span style="font-family: poppins;font-weight: bold">Design Thinking</span>
                 <br>
                 <span>Simply on your hand.</span>
               </h3>
@@ -250,6 +250,7 @@ p {
   font-weight: 600;
   background-color: #00de91;
   padding: 15px 60px;
+  font-family: poppins;
 }
 
 .btn:hover {

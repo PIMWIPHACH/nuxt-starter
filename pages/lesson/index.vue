@@ -27,7 +27,7 @@
                 <button class="w3-btn"/>
                 <button
                   class="w3-btn name"
-                  style="margin-left: 0px;margin-right: 0px;background-color: transparent;font-family: poppins;font-size: 16px;"
+                  style="margin-left: 0px;margin-right: 0px;background-color: transparent;font-family: poppins;font-size: 16px;padding-right:0px;"
                 >20%</button>
               </div>
             </div>

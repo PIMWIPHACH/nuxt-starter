@@ -100,7 +100,6 @@ export default {
 <style scoped>
 .w3-bar {
   margin-right: 0px;
-  padding-right: 40px;
   padding-top: 6px;
   border: none;
   margin-bottom: 30px;
@@ -117,7 +116,7 @@ export default {
 
 .progress-name {
   font-family: poppins, sans-serif;
-  font-size: 1.25em;
+  font-size: 1em;
   font-weight: bold;
   color: white;
   background-color: transparent;
@@ -125,6 +124,7 @@ export default {
   margin-bottom: 0px;
   margin-top: px;
   letter-spacing: 0.25px;
+  padding-right: 0px;
 }
 
 .headline {

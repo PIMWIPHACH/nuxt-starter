@@ -21,10 +21,10 @@
             <div class="progress-bar">
               <div class="w3-bar" style="margin-top: 0px;">
                 <button class="w3-btn" style="background-color: #00DE91"/>
-                <button class="w3-btn"/>
-                <button class="w3-btn"/>
-                <button class="w3-btn"/>
-                <button class="w3-btn"/>
+                <button class="w3-btn" style="background-color: white"/>
+                <button class="w3-btn" style="background-color: white"/>
+                <button class="w3-btn" style="background-color: white"/>
+                <button class="w3-btn" style="background-color: white"/>
                 <button
                   class="w3-btn name"
                   style="margin-left: 0px;margin-right: 0px;background-color: transparent;font-family: poppins;font-size: 16px;padding-right:0px;"

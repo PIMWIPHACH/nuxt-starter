@@ -33,7 +33,7 @@
             <h5 class="headline" style="text-align: center;">Design Thinking is a _____.</h5>
             <div class="answer-choice">
               <button class="choice">Way of thinking about design</button>
-              <button class="choice"><nuxt-link to="/lesson/_slug/answer">Method and mindset to define, 
+              <button class="choice" style="border: 2px solid #00de91;"><nuxt-link to="/lesson/_slug/reward">Method and mindset to define, 
               frame, and solve problems</nuxt-link></button>
               <button class="choice">Way to seperate “Thinking” 
               from “Making”</button>
@@ -48,7 +48,7 @@
   </div>
 </template>
 
-<script>
+<script scoped>
 export default {
   data: () => ({
     quizes: [
@@ -76,7 +76,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .w3-bar {
   margin-right: 0px;
   padding-top: 6px;
@@ -148,8 +148,8 @@ export default {
   padding-top: 12px;
   padding-bottom: 12px;
   border-radius: 30px;
-  background-color: lightgrey;
-  border: 2.25px solid lightgrey;
+  background-color: #00de91;
+  border: 2.25px solid #00de91;
   margin-top: 40px;
 }
 

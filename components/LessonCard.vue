@@ -17,7 +17,7 @@
       <div>
         <p
           class="lesson-description"
-          style="font-family: poppins;text-align: left;"
+          style="font-family: poppins;text-align: left;margin-top:10px;"
         >{{ description }}</p>
       </div>
       <!--  -->
@@ -106,7 +106,7 @@ export default {
 }
 
 .time {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 0.8em;
   font-weight: regular;
   color: #151862;
@@ -139,6 +139,7 @@ export default {
   color: white;
   background-color: #151862;
   margin-top: 10px;
+  margin-bottom: 10px;
   margin-left: 0px;
   padding: 2px 18px 2px;
   border-radius: 30px;

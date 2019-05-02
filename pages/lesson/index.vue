@@ -20,14 +20,14 @@
           <div class="progress-bar" style="display: inline-block">
             <div class="progress-bar">
               <div class="w3-bar" style="margin-top: 0px;">
-                <button class="w3-btn" style="background-color: #82E024"/>
+                <button class="w3-btn" style="background-color: #00DE91"/>
                 <button class="w3-btn"/>
                 <button class="w3-btn"/>
                 <button class="w3-btn"/>
                 <button class="w3-btn"/>
                 <button
                   class="w3-btn name"
-                  style="margin-left: 0px;background-color: transparent;font-family: poppins;"
+                  style="margin-left: 0px;margin-right: 0px;background-color: transparent;font-family: poppins;font-size: 16px;"
                 >20%</button>
               </div>
             </div>
@@ -187,7 +187,7 @@ h4 {
   font-family: poppins;
   font-weight: bold;
   letter-spacing: 0.5px;
-  background-color: #82e024;
+  background-color: #00de91;
   height: 50px;
   width: 150px;
   border-radius: 10px;

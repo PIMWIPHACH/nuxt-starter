@@ -33,14 +33,14 @@
             <h5 class="headline" style="text-align: center;">Design Thinking is a _____.</h5>
             <div class="answer-choice">
               <button class="choice">Way of thinking about design</button>
-              <button class="choice" style="border: 2px solid #00de91;"><nuxt-link to="/lesson/_slug/reward">Method and mindset to define, 
-              frame, and solve problems</nuxt-link></button>
+              <button class="choice" style="border: 2px solid #00de91;">Method and mindset to define, 
+              frame, and solve problems</button>
               <button class="choice">Way to seperate “Thinking” 
               from “Making”</button>
               <button class="choice">Curriculum for teaching 
               non-designers design</button>
             </div>
-            <button class="finish-quiz">Finish quiz</button>
+            <button class="finish-quiz"><nuxt-link to="/lesson">Finish quiz</nuxt-link></button>
           </div>
         </div>
       </div>
